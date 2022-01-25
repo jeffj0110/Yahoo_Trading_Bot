@@ -1,0 +1,12 @@
+2022-01-24 22:40:05,206 - Yahoo_GetOHLC - INFO - Running With Ticker Symbol : ADBE, Start Date : 2019-01-21, End Date : 2022-01-21, bar : 1d
+2022-01-24 22:40:05,213 - functions - INFO - Working from default directory C:\Users\jeffj\FITSolutionsProjects\YahooFinance_projects 
+2022-01-24 22:40:05,213 - functions - INFO - Session created at 2022_01_24-104005_PM EST
+2022-01-24 22:40:05,213 - functions - INFO - Downloading Data
+2022-01-24 22:40:05,213 - functions - INFO - ================================================================================
+2022-01-24 22:40:05,522 - Yahoo_GetOHLC - INFO - Data Retrieval From Yahoo Finance Complete
+2022-01-24 22:40:05,522 - indicator_calcs - INFO - Starting Calc Of Indicators
+2022-01-24 22:40:06,476 - indicator_calcs - INFO - Ending Calc Of Indicators
+2022-01-24 22:40:06,478 - Yahoo_GetOHLC - INFO - Annualized Strategy Return = -15.56
+2022-01-24 22:40:06,478 - Yahoo_GetOHLC - INFO - Annualized Buy and Hold Return = 27.93
+2022-01-24 22:40:06,479 - Yahoo_GetOHLC - INFO - Starting to write spreadsheet to ADBE_run_2022_01_24-224005.csv
+2022-01-24 22:40:06,501 - Yahoo_GetOHLC - INFO - Finished writing spreadsheet

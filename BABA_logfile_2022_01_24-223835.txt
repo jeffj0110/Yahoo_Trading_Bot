@@ -1,0 +1,12 @@
+2022-01-24 22:38:35,445 - Yahoo_GetOHLC - INFO - Running With Ticker Symbol : BABA, Start Date : 2019-01-21, End Date : 2022-01-21, bar : 1d
+2022-01-24 22:38:35,453 - functions - INFO - Working from default directory C:\Users\jeffj\FITSolutionsProjects\YahooFinance_projects 
+2022-01-24 22:38:35,453 - functions - INFO - Session created at 2022_01_24-103835_PM EST
+2022-01-24 22:38:35,454 - functions - INFO - Downloading Data
+2022-01-24 22:38:35,454 - functions - INFO - ================================================================================
+2022-01-24 22:38:35,677 - Yahoo_GetOHLC - INFO - Data Retrieval From Yahoo Finance Complete
+2022-01-24 22:38:35,678 - indicator_calcs - INFO - Starting Calc Of Indicators
+2022-01-24 22:38:36,810 - indicator_calcs - INFO - Ending Calc Of Indicators
+2022-01-24 22:38:36,811 - Yahoo_GetOHLC - INFO - Annualized Strategy Return = 7.95
+2022-01-24 22:38:36,811 - Yahoo_GetOHLC - INFO - Annualized Buy and Hold Return = -4.85
+2022-01-24 22:38:36,812 - Yahoo_GetOHLC - INFO - Starting to write spreadsheet to BABA_run_2022_01_24-223835.csv
+2022-01-24 22:38:36,833 - Yahoo_GetOHLC - INFO - Finished writing spreadsheet

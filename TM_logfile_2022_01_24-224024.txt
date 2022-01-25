@@ -1,0 +1,12 @@
+2022-01-24 22:40:24,713 - Yahoo_GetOHLC - INFO - Running With Ticker Symbol : TM, Start Date : 2019-01-21, End Date : 2022-01-21, bar : 1d
+2022-01-24 22:40:24,723 - functions - INFO - Working from default directory C:\Users\jeffj\FITSolutionsProjects\YahooFinance_projects 
+2022-01-24 22:40:24,723 - functions - INFO - Session created at 2022_01_24-104024_PM EST
+2022-01-24 22:40:24,723 - functions - INFO - Downloading Data
+2022-01-24 22:40:24,724 - functions - INFO - ================================================================================
+2022-01-24 22:40:24,949 - Yahoo_GetOHLC - INFO - Data Retrieval From Yahoo Finance Complete
+2022-01-24 22:40:24,949 - indicator_calcs - INFO - Starting Calc Of Indicators
+2022-01-24 22:40:25,895 - indicator_calcs - INFO - Ending Calc Of Indicators
+2022-01-24 22:40:25,897 - Yahoo_GetOHLC - INFO - Annualized Strategy Return = 12.68
+2022-01-24 22:40:25,897 - Yahoo_GetOHLC - INFO - Annualized Buy and Hold Return = 17.67
+2022-01-24 22:40:25,898 - Yahoo_GetOHLC - INFO - Starting to write spreadsheet to TM_run_2022_01_24-224024.csv
+2022-01-24 22:40:25,920 - Yahoo_GetOHLC - INFO - Finished writing spreadsheet

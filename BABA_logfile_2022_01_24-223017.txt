@@ -1,0 +1,5 @@
+2022-01-24 22:30:17,976 - Yahoo_GetOHLC - INFO - Running With Ticker Symbol : BABA, Start Date : 2019-01-21, End Date : 2022-01-21, bar : 1d
+2022-01-24 22:30:17,977 - functions - INFO - Working from default directory C:\Users\jeffj\FITSolutionsProjects\YahooFinance_projects 
+2022-01-24 22:30:17,977 - functions - INFO - Session created at 2022_01_24-103017_PM EST
+2022-01-24 22:30:17,977 - functions - INFO - Downloading Data
+2022-01-24 22:30:17,977 - functions - INFO - ================================================================================
