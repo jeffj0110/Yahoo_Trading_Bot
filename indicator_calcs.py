@@ -307,7 +307,7 @@ class Indicators():
 
 
     def filter_non_numeric(self, input_str=str) -> str :
-        numeric_str = re.sub("[^\d\.]", "", input_str)
+        numeric_str = re.sub("[^\\d\\.]", "", input_str)
         return numeric_str
 
     def buy_condition(self):
