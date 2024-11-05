@@ -108,11 +108,12 @@ class PyRobot():
         """
 
         # This is the only endpoint used in the Yahoo library
-        yahoo_prices_df = yf.download(tickers=symbols, interval=bar_string, start=start, end=end, auto_adjust = True, threads=False)
-
-        # Renaming columns to maintain compatibility with previous versions of the bot
+        yahoo_prices_df = yf.download(tickers=symbols[0], interval=bar_string, start=start, end=end, auto_adjust = True, threads=False)
+        #yahoo_prices_df = yahoo_prices_df['High'] + yahoo_prices_df['Low'] + yahoo_prices_df['Open'] + yahoo_prices_df['Close'] + yahoo_prices_df['Volume'] # Renaming columns to maintain compatibility with previous versions of the bot
         self.historical_prices_df = yahoo_prices_df.rename(columns={'High':'high', 'Low' :'low', 'Open': 'open', 'Close' : 'close', 'Volume':'volume'})
         self.historical_prices_df.insert(0,'symbol',symbols[0])
+        #self.historical_prices_df = self.historical_prices_df.set_index(keys=['symbol'])
+        #print(self.historical_prices_df.head())
         self.stock_frame = self.historical_prices_df
         return self.historical_prices_df
 

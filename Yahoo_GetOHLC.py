@@ -10,7 +10,7 @@ import pandas as pd
 from functions import setup_func
 from indicator_calcs import Indicators
 
-def Calc_Returns(stock_info, start_date, end_date, logger):
+def Calc_Returns(stock_info, start_date, end_date, logger, symbol):
 
     column_strategy_return = []
     column_bnh_return = []
@@ -18,10 +18,10 @@ def Calc_Returns(stock_info, start_date, end_date, logger):
     end_dt = datetime.strptime(end_date, '%Y-%m-%d')
     days_between = (end_dt - start_dt).days
 
-    final_pnl_value = stock_info['Running_PnL'][-1]
-    starting_closing_price = stock_info['close'][0]
+    final_pnl_value = stock_info['Running_PnL', symbol].iloc[-1]
+    starting_closing_price = stock_info['close', symbol].iloc[0]
     annualized_return_on_strategy = ((1+(final_pnl_value/starting_closing_price)) ** (365/days_between)) - 1
-    end_closing_price = stock_info['close'][-1]
+    end_closing_price = stock_info['close', symbol].iloc[-1]
     annualized_buy_hold_return = ((1+((end_closing_price-starting_closing_price)/starting_closing_price)) ** (365/days_between)) - 1
     column_strategy_return.append(str(round((annualized_return_on_strategy * 100),2)))
     column_bnh_return.append(str(round((annualized_buy_hold_return * 100),2)))
@@ -29,8 +29,8 @@ def Calc_Returns(stock_info, start_date, end_date, logger):
         column_strategy_return.append('')
         column_bnh_return.append('')
 
-    stock_info['Strategy_Return'] = pd.Series(column_strategy_return).values
-    stock_info['Buy_Hold_Return'] = pd.Series(column_bnh_return).values
+    stock_info['Strategy_Return', symbol] = pd.Series(column_strategy_return).values
+    stock_info['Buy_Hold_Return', symbol] = pd.Series(column_bnh_return).values
 
     logger.info('Annualized Strategy Return = {strat_ret}'.format(strat_ret = column_strategy_return[0]))
     logger.info('Annualized Buy and Hold Return = {bnh_ret}'.format(bnh_ret = column_bnh_return[0]))
@@ -70,9 +70,9 @@ def Get_Data(inputsymbol, start_date, end_date, bar_string, logger, now) :
     # Create an indicator Object.
     indicator_client = Indicators(input_price_data_frame=trading_robot.stock_frame, lgfile=logger)
 
-    stock_info_df = indicator_client.refresh()
+    stock_info_df = indicator_client.refresh(symbol)
 
-    stock_info_df = Calc_Returns(stock_info_df, start_date, end_date, logger)
+    stock_info_df = Calc_Returns(stock_info_df, start_date, end_date, logger, symbol)
 
     logger.info('Starting to write spreadsheet to {fname}'.format(fname=full_path))
 
