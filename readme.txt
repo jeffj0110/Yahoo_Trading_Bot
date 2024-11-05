@@ -1,3 +1,6 @@
+Nov 5, 2024 
+This code was updated to run with Python version 3.12.7
+
 # Setup to run this code
 - You don't need any logins for Yahoo or Yahoo Finance
 - Access to their market data is free, but it will be delayed
